@@ -6,11 +6,11 @@ from prompt import AGENT_SYSTEM_PROMPT
 from tools封装 import available_tools
 
 # 1.配置LLM客户端
-API_KEY = "f04a269b4e34425e93bac8e6bed0a719.dtZKweufCjlHMP5Y"
+API_KEY = "你自己的api_key"
 BASE_URL = "https://open.bigmodel.cn/api/paas/v4/"
-MODEL_ID = "glm-4-0520"
-TAVILY_API_KEY = "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"
-os.environ["TAVILY_API_KEY"] = "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"
+MODEL_ID = "glm-4-0520" #可以根据你的实际情况来修改模型
+TAVILY_API_KEY = "你自己的tavily_api_key"
+os.environ["TAVILY_API_KEY"] = "你自己的tavily_api_key"
 
 llm = OpenAICompatibleClient(
     model = MODEL_ID,
@@ -19,7 +19,7 @@ llm = OpenAICompatibleClient(
 )
 
 # 2.初始化
-user_prompt = "你好，请帮我查询一下今天永州的天气，如何根据天气推荐一个合适的旅游景点"
+user_prompt = "你好，请帮我查询一下今天长沙的天气，如何根据天气推荐一个合适的旅游景点"
 prompt_history = [f'用户请求：{user_prompt}']
 
 print(f"用户输入: {user_prompt}\n" + "="*40)
